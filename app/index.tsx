@@ -2,7 +2,7 @@ import ChatRoomItem from "@/components/ChatRoomItem";
 import { View, StyleSheet, FlatList } from "react-native";
 import ChatRooms from "@/assets/dummy-data/ChatRooms";
 
-export default function TabOneScreen() {
+export default function Home() {
   return (
     <View style={styles.page}>
       <FlatList

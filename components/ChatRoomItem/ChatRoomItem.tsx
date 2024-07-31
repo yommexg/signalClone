@@ -1,11 +1,15 @@
-import { Text, View, Image } from "react-native";
+import { Text, View, Image, TouchableOpacity } from "react-native";
 import styles from "./styles";
+import { router } from "expo-router";
 
 export default function ChatRoomItem({ chatRoom }) {
   const user = chatRoom.users[1];
 
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={() => router.push(`/(chatRoom)/${chatRoom.id}`)}
+    >
       <View>
         <Image
           source={{
@@ -29,6 +33,6 @@ export default function ChatRoomItem({ chatRoom }) {
           {chatRoom.lastMessage.content}
         </Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
